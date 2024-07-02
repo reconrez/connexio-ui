@@ -1,0 +1,33 @@
+$primary : #008080;
+$secondary : #18546A;
+$dark : #1d1e24;
+$light : #eeeeee;
+$info : #f9e9e2;
+$success : #13cd65;
+$warning : #fabf00;
+$danger : #cf223b;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// Override primary color
+
+
+$custom-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+
+$theme-colors: map-remove($theme-colors, "primary", "secondary", "info", "success", "warning", "danger","light", "dark");
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Compile your Sass
+// The Angular CLI usually handles Sass compilation during development.
