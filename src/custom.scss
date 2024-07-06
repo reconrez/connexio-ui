@@ -29,5 +29,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 // Compile your Sass
 // The Angular CLI usually handles Sass compilation during development.
