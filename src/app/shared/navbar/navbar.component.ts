@@ -12,7 +12,7 @@ export class NavbarComponent {
   darkMode : boolean = false;
 
   getTitle = () => {
-    return "Connexio";
+    return "Dashboard";
   }
 
   darkModeToggle(){

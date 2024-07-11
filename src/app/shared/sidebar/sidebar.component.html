@@ -1,15 +1,15 @@
-<div class="sidebar-wrapper d-flex flex-column shadow h-100">
-    <div class="logo shadow-lg bg-primary text-light">
-        <h3 class="m-0 p-3">CONNEXIO</h3>
-      </div>
-      <div class="sidebar-menu p-3">
-        <ul class="nav d-flex flex-column">
-          <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{ menuItem.class }} nav-item">
-            <a [routerLink]="[menuItem.path]">
-              <i class="rounded-circle  {{ menuItem.icon }}"></i>
-              <p>{{ menuItem.title }}</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+<div class="sidebar-wrapper d-flex flex-column">
+  <div class="logo">
+    <h3 class="m-0 p-3">CONNEXIO</h3>
+  </div>
+  <div class="sidebar-menu">
+    <ul class="nav d-flex flex-column">
+      <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{ menuItem.class }} nav-item">
+        <a [routerLink]="[menuItem.path]">
+          <i class="rounded-circle  {{ menuItem.icon }}"></i>
+          <p>{{ menuItem.title }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

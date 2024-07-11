@@ -1,17 +1,21 @@
-$primary : #008080;
-$secondary : #18546A;
-$dark : #1d1e24;
-$light : #eeeeee;
-$info : #f9e9e2;
-$success : #13cd65;
-$warning : #fabf00;
-$danger : #cf223b;
+$primary: #008080;
+$secondary: #18546A;
+$dark: #1d1e24;
+$light: #eeeeee;
+$info: #f9e9e2;
+$success: #13cd65;
+$warning: #fabf00;
+$danger: #cf223b;
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
+
 // Override primary color
 
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 $custom-colors: (
   "primary":    $primary,
@@ -24,9 +28,16 @@ $custom-colors: (
   "dark":       $dark
 ) !default;
 
+
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "info", "success", "warning", "danger","light", "dark");
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+$body-bg-dark: #000b0f;
+$body-bg: #eeeeee;
+
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
