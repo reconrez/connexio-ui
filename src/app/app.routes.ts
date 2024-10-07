@@ -7,9 +7,9 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { DashboardComponent } from './layouts/pages/dashboard/dashboard.component';
 
 export const routes: Routes = [
-    {
+      {
         path: "",
-        redirectTo: "home",
+        redirectTo: "login",
         pathMatch: "full"
       },
       {
@@ -24,9 +24,9 @@ export const routes: Routes = [
         path: "dashboard",
         component: DashboardComponent,
       },
-      {
-        path: "**",
-        component: NotFoundComponent,
-      }
+      // {
+      //   path: "**",
+      //   component: NotFoundComponent,
+      // }
 //child routes defined in layouts/admin-layout 
 ];

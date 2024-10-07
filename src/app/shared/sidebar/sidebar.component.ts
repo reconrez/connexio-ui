@@ -24,6 +24,11 @@ export const ROUTES: RouteInfo[] = [
     icon: "icon-chart-pie-36"
   },
   {
+    path: "/notifications",
+    title: "Notifications",
+    icon: "icon-chart-pie-36"
+  },
+  {
     path: "/connections",
     title: "Connections",
     icon: "icon-chart-pie-36"
@@ -40,7 +45,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: "/tokens",
-    title: "Connex Tokens",
+    title: "Tokens",
     icon: "icon-single-02"
   }
 ];

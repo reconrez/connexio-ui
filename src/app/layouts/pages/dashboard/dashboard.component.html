@@ -1,4 +1,29 @@
 <section class="dashboard-wrapper w-100 h-100">
-    <app-navbar></app-navbar>
-    <app-home></app-home>
+        <div class="sidebar-content">
+            <app-sidebar></app-sidebar>
+        </div>
+        <!-- ====================================== Dashboard ===================================== -->
+        <section class="dashboard">
+            <div class="row">
+                <app-navbar></app-navbar>
+            </div>
+                <div class="top-notifications w-100">
+                    <div class="alert alert-primary w-100" role="alert">
+                        A simple info alert—check it out!
+                      </div>
+                </div>
+                <div class="messages-recieved">
+
+                </div>
+                <div class="dashboard-cards">
+                    <div class="card navigation-cards" *ngFor="let routes of screenRoutes">
+                        <h6 class="text-primary">
+                            {{routes.pageName}}
+                        </h6>
+                    </div>
+                </div>
+        </section>
+        <div class="right-sidebar">
+            <app-right-sidebar></app-right-sidebar>
+        </div>
 </section>

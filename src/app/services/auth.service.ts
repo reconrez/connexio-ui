@@ -44,7 +44,8 @@ export class AuthService {
         }
         localStorage.setItem('access_token', JSON.stringify(res.access_token));
         localStorage.setItem('current_user', JSON.stringify(currentUser));
-        this.router.navigate(['home/' + res]);
+        console.log(res)
+        this.router.navigate(['/dashboard']);
       });
   }
 

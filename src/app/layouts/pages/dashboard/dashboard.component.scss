@@ -1,4 +1,40 @@
 .dashboard-wrapper{
-    padding: 3rem;
+    padding: 0.8rem;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 11rem auto 13rem;
+}
     // background: linear-gradient(38deg, rgb(0, 0, 0) 0%, rgb(7 47 62) 100%);
+
+.sidebar-content{
+   width: auto;
+   padding: 0; 
+}
+
+.dashboard{
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width: 100% ;
+}
+
+.dashboard-cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.navigation-cards{
+    width: 11rem;
+    height: 11rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px;
+}
+
+.top-notifications{
+    padding: 3rem 0 2rem; 
 }

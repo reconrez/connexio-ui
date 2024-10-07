@@ -1,7 +1,8 @@
 @import "../../../custom.scss";
 
 .sidebar-wrapper{
-    width: 14rem;
+    height: 100%;
+    max-width: 11rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 6px #00000052, -1px -1px 6px #00000040
 }
@@ -16,6 +17,10 @@
 
 .nav-item{
     padding: 6px 1rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .nav-item:hover{
