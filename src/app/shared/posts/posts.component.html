@@ -1,1 +1,102 @@
-<p>posts works!</p>
+<div class="card post-container">
+  <div class="card-body">
+    <div class="profile-header d-flex ">
+      <div class="d-flex align-items-center justify-content-start">
+        @if(postData?.profilePicture){
+          <img alt="Profile Photo" width="40px" height="40px" class="avatar rounded-circle me-2" [src]="postData.profilePicture" />
+        }@else{
+          <i class="fa-solid fa-user"></i>
+        }
+        <p class="card-title">{{postData.username}}</p>
+      </div>
+      <div class="post-dropdown">
+        <i class="tim-icons icon-minimal-down"></i>
+      </div>
+    </div>
+    <p class="card-text">
+      {{postData.content}}
+    </p>
+    <a (click)="sendLike()" class="card-link">
+      @if (!like.value) {
+        <i class="fa-regular fa-heart text-secondary" aria-hidden="true"></i>
+      } @else {
+        <i class="fa-solid fa-heart text-primary" aria-hidden="true"></i>
+      }
+    </a>
+    <a (click)="commentsVisibility()" class="card-link">
+      <i class="fa-regular fa-comment" aria-hidden="true"></i>
+    </a>
+    <a class="card-link">
+      <i class="fa-solid fa-link" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- add comments loop -->
+
+
+  @if (commentsHide) {
+    <div class="card-footer comment-box">
+      <form [formGroup]="commentsData" class="d-flex w-100 justify-content-between align-items-center" (ngSubmit)="publishComment()">
+        <div class="comment-text-box flex-grow-1 me-2">
+          <textarea class="form-control comment-text-area" formControlName="comment" name="comment" id="comment-box"></textarea>
+        </div>
+        <div class="button-wrapper">
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+        @if (postData?.comments) {
+    <div class="comment-container ms-4 me-2">
+      @for (comment of postData.comments; track comment._id) {
+        <div class="comment">
+          <div class="">
+            <div class="row">
+              <div class="col-sm-10 d-flex align-items-center">
+                <img alt="Profile Photo" class="comment-avatar avatar rounded-circle me-3" [src]="comment.profilePicture" (error)="'img/default-avatar.png'"/>
+                <h6 class=" mb-0">{{comment.username}}</h6>
+              </div>
+              @if (comment.canDelete) {
+                <div class="col-sm-2 d-flex justify-content-end align-items-center">
+                  <a id="delete-icon" class="card-link delete-icon">
+                    <i (click)="deleteComment(comment._id)" class="fa-solid fa-trash text-primary" aria-hidden="true"></i>
+                  </a>
+                </div>
+              }
+            </div>
+            <p class="card-text mt-2">{{comment.comment}}</p>
+          </div>
+        </div>
+      }
+    </div>
+  }  
+    </div>
+    <div class="comment-container ms-4 me-2">
+      <!-- @for (comment of displayedComments; track comment._id) {
+        <div class="card mb-3 comment">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-10 d-flex align-items-center">
+                <img alt="Profile Photo" class="comment-avatar avatar rounded-circle me-3" [src]="comment.profilePicture" />
+                <h6 class="card-title mb-0">{{comment.username}}</h6> 
+              </div>
+            </div>
+            <p class="card-text mt-2">{{comment.comment}}</p>
+          </div>
+        </div>
+      } -->
+    </div>
+    @if (postData.comments.length > displayedComments.length) {
+      <div class="text-center mt-3">
+        <button class="btn btn-primary" (click)="loadMoreComments()">See More</button>
+      </div>
+    }
+  }
+</div>
+ 
+  @if (commentSuccessMessage) {
+    <div class="alert alert-success" role="alert">
+      {{ commentSuccessMessage }}
+    </div>
+  }
+  

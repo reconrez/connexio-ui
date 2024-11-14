@@ -1,5 +1,11 @@
-<section class="feed w-100">
-    <div class="card">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ab dolor dolore beatae illum, similique suscipit, corporis debitis at repudiandae fugit voluptates atque? Obcaecati error, facilis illo quaerat hic enim.
+<section class="feed h-100 w-100">
+    <div class="create-post-wrapper">
+        <app-create-posts></app-create-posts>
     </div>
-</section>
+
+    @for (post of postData | decending; track post) {
+        <div class="individual-posts">
+            <app-posts [postData]="post"></app-posts>
+        </div>
+    }
+</section> 

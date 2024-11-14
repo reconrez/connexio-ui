@@ -36,6 +36,54 @@ $body-bg-dark: #000b0f;
 $body-bg: #eeeeee;
 
 
+@keyframes light{
+  0% {
+    background-position-y:100%
+  }
+
+  100% {
+    background-position-y:0%
+  }
+}
+
+@keyframes dark{
+  0% {
+    background-position-y:0%
+  }
+
+  100% {
+    background-position-y: 100%
+  }
+}
+
+body[data-bs-theme="initial"] {
+  background-position-y:0%
+}
+
+body[data-bs-theme="dark"] {
+  --bs-body-bg: #000b0f;
+  --bs-body-color: #eeeeee;
+  animation: dark 1s ease forwards;
+  // background: linear-gradient(0deg, #000000 0%, #002222 100%);
+  .card, .navbar, .sidebar-wrapper{
+    background: #ffffff0a;
+    box-shadow: 1px 1px 6px #00808070;
+    // border: 1px solid #003333;
+  }
+}
+
+body[data-bs-theme="light"] {
+  --bs-body-bg: #eeeeee;
+  --bs-body-color: #000000;
+  animation: light 1s ease forwards;
+  // background: linear-gradient(0deg, #5ba3a3 -21%, #eaeaea 100%);
+  .card, .navbar, .sidebar-wrapper{
+    background: rgb(255 255 255 / 36%);
+    box-shadow: 2px 2px 6px #00000052, -1px -1px 6px #00000040
+  }
+}
+
+
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/bootstrap";

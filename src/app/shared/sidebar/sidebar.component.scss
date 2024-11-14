@@ -24,8 +24,10 @@
 }
 
 .nav-item:hover{
+    transition: background 0.7s;
     background: $primary;
     p{
+        transition: color 0.4s;
         color: $info;
     }
 }

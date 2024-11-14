@@ -1,9 +1,9 @@
-<nav class="navbar bg-primary navbar-expand-lg navbar-absolute">
+<nav class="navbar navbar-expand-lg navbar-absolute">
   <div class="container-fluid justify-content-between">
-    <a class="navbar-brand text-info fw-bold" href="javascript:void(0)">{{ getTitle() }}</a>
+    <a class="navbar-brand fw-bold" href="javascript:void(0)">{{ getTitle() }}</a>
     <div class="icon-right">
-      <div class="dark-mode-button btn btn-secondary rounded-circle">
-        <i class="fa-regular fa-moon" (click)="darkModeToggle()"></i>     
+      <div class="dark-mode-button btn btn-outline-secondary" (click)="darkModeToggle()">
+        <i id="darkModeButton" class="fa-solid fa-mountain-sun"></i>     
       </div>   
     </div>
   </div>

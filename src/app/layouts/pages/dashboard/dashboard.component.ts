@@ -5,13 +5,14 @@ import { SidebarComponent } from "../../../shared/sidebar/sidebar.component";
 import { NotificationCardsComponent } from "../../../shared/notification-cards/notification-cards.component";
 import { NgFor } from '@angular/common';
 import { RightSidebarComponent } from "../../../shared/right-sidebar/right-sidebar.component";
+import { FeedComponent } from "../feed/feed.component";
 
 @Component({
     selector: 'app-dashboard',
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss',
-    imports: [NgFor, NavbarComponent, HomeComponent, SidebarComponent, NotificationCardsComponent, RightSidebarComponent]
+    imports: [NgFor, NavbarComponent, HomeComponent, SidebarComponent, NotificationCardsComponent, RightSidebarComponent, FeedComponent]
 })
 export class DashboardComponent {
     screenRoutes = [

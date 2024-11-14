@@ -6,8 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DecendingPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(arr: string | any[]): string | any[] {
+    if (typeof arr === 'string') {
+      return arr.split('').reverse().join('');
+    } else {
+      return arr.slice().reverse();
+    }
   }
 
 }

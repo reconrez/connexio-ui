@@ -7,21 +7,12 @@
             <div class="row">
                 <app-navbar></app-navbar>
             </div>
-                <div class="top-notifications w-100">
-                    <div class="alert alert-primary w-100" role="alert">
-                        A simple info alert—check it out!
-                      </div>
-                </div>
                 <div class="messages-recieved">
 
                 </div>
-                <div class="dashboard-cards">
-                    <div class="card navigation-cards" *ngFor="let routes of screenRoutes">
-                        <h6 class="text-primary">
-                            {{routes.pageName}}
-                        </h6>
-                    </div>
-                </div>
+            <div class="post-feed">
+                <app-feed></app-feed>
+            </div>
         </section>
         <div class="right-sidebar">
             <app-right-sidebar></app-right-sidebar>
