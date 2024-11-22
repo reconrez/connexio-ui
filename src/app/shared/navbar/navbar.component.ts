@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -11,8 +13,17 @@ export class NavbarComponent {
 
   darkMode : boolean = false;
 
+  constructor(private router: Router, private location : Location) {}
+
+  navigateTo(route: string): void {
+    this.router.navigate([route]); // Navigate to the specified route
+  }
   getTitle = () => {
     return "Dashboard";
+  }
+
+  goBack(): void {
+    this.location.back(); // Navigates to the previous page in history
   }
 
   darkModeToggle() {

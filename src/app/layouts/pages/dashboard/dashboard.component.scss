@@ -1,8 +1,7 @@
 .dashboard-wrapper{
     padding: 0.8rem;
-    display: grid;
-    gap: 0.8rem;
-    grid-template-columns: 11rem auto 13rem;
+    display: flex;
+    justify-content: center;
 }
     // background: linear-gradient(38deg, rgb(0, 0, 0) 0%, rgb(7 47 62) 100%);
 
@@ -14,11 +13,22 @@
 .dashboard{
     padding: 0;
     display: flex;
-    flex-flow: column;
+    flex-flow: column !important;
     flex-wrap: wrap;
-    width: 100% ;
+    width: 50% ;
 }
 
 .top-notifications{
     padding: 3rem 0 2rem; 
 }
+
+.router{
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard {
+      width: 100%;
+      flex-flow: column ;
+    }
+  }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsComponent } from "../../../shared/posts/posts.component";
-import { CreatePostsComponent } from "../../../shared/create-posts/create-posts.component";
 import { PostService } from '../../../services/post.service';
 import { AuthService } from '../../../services/auth.service';
 import { UserService } from '../../../services/user.service';
@@ -10,7 +9,7 @@ import { DecendingPipe } from "../../../pipes/decending.pipe";
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [PostsComponent, CreatePostsComponent, DecendingPipe],
+  imports: [PostsComponent, DecendingPipe],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss'
 })

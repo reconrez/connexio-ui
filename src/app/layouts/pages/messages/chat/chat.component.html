@@ -1,0 +1,64 @@
+<div class="chat-container">
+    <div class="recipent-name-container navbar">
+      <p class="recipent-name">Username</p>
+    </div>
+    <div class="chat-window">
+      <div class="recipent-text">
+        <div class="user-image">
+          <img alt="Profile Photo" class="rounded-circle me-2" src="img/anime3.png" width="20" height="20" />
+        </div>
+        <div class="chat-body">
+          <div class="message">
+            <div class="text-start" >
+              <p class="message-bubble text-start">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit non, quaerat facilis eligendi culpa porro minima labore, accusamus veritatis ipsum quasi sunt! Commodi dolor provident libero magnam nostrum, culpa animi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user-text">
+        <div class="chat-body">
+          <div class="message">
+            <div class="text-start" >
+              <p class="message-bubble text-end">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit non, quaerat facilis eligendi culpa porro minima labore, accusamus veritatis ipsum quasi sunt! Commodi dolor provident libero magnam nostrum, culpa animi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="user-image">
+          <img alt="Profile Photo" class="rounded-circle ms-2" src="img/anime3.png" width="20" height="20" />
+        </div>
+      </div>
+        <!-- <div *ngFor="let message of messages" class="message">
+          <div
+            [ngClass]="{
+              'text-end': message.sender === currentUserId,
+              'text-start': message.sender !== currentUserId
+            }"
+          >
+            <p
+              class="message-bubble p-2 rounded"
+              [ngClass]="{
+                'bg-primary text-white': message.sender === currentUserId,
+                'bg-light text-dark': message.sender !== currentUserId
+              }"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit non, quaerat facilis eligendi culpa porro minima labore, accusamus veritatis ipsum quasi sunt! Commodi dolor provident libero magnam nostrum, culpa animi.
+            </p>
+          </div>
+        </div> -->
+    </div>
+    <div class="chat-footer border-top">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Type a message..."
+        
+      />
+      <a href="" class="send-message">
+        <i class="fa-solid fa-chevron-right"></i>
+      </a> 
+    </div>
+</div>

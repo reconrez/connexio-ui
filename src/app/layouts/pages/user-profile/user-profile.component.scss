@@ -1,0 +1,29 @@
+.identity{
+    display: flex;
+    padding: 0.6rem 0.6rem 0.6rem 0;
+}
+
+.username-container{
+    padding: 0 0.6rem;
+}
+
+.bio-container{
+    font-size: 12px;
+}
+
+.follow-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    font-size: 12px;
+}
+
+.counts, .labels{
+    text-align: center;
+}
+
+.tablist{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}

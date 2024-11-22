@@ -1,10 +1,29 @@
+<div class="breadcrumb">
+  <a class="back-button" (click)="goBack()"><i class="fa-solid fa-chevron-left"></i></a>
+  <a class="navbar-brand fw-bold d-flex justify-content-center align-items-center" href="javascript:void(0)">{{ getTitle() }}</a>
+  <div class="dark-mode-button d-flex justify-content-end align-items-center" (click)="darkModeToggle()">
+    <i id="darkModeButton" class="fa-solid fa-mountain-sun"></i>     
+  </div>  
+</div>
 <nav class="navbar navbar-expand-lg navbar-absolute">
   <div class="container-fluid justify-content-between">
-    <a class="navbar-brand fw-bold" href="javascript:void(0)">{{ getTitle() }}</a>
-    <div class="icon-right">
-      <div class="dark-mode-button btn btn-outline-secondary" (click)="darkModeToggle()">
-        <i id="darkModeButton" class="fa-solid fa-mountain-sun"></i>     
-      </div>   
-    </div>
+    <a id="home" class="home-icon" (click)="navigateTo('home')">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <a id="search" class="search-icon" (click)="navigateTo('search')">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </a>
+    <a id="forum" class="forum-icon" (click)="navigateTo('forum')">
+      <i class="fa-brands fa-forumbee"></i>
+    </a>
+    <a id="explore" class="explore-icon" (click)="navigateTo('explore')">
+      <i class="fa-solid fa-binoculars"></i>
+    </a>
+    <a id="messages" class="messages-icon" (click)="navigateTo('messages')">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a id="profile" class="profile-icon" (click)="navigateTo('profile')">
+      <i class="fa-solid fa-user"></i>
+    </a>
   </div>
 </nav>

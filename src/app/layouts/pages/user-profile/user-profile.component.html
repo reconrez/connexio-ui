@@ -1,1 +1,143 @@
-<p>user-profile works!</p>
+<section class="user-profile">
+    <div class="bio-container">
+        <div class="identity">
+            <img alt="Profile Photo" class="rounded-circle me-2" src="img/anime3.png" width="40" height="40" />
+            <div class="username-container">
+                <p class="card-title mb-0">UserName</p>
+                <p class="name">Name</p>
+            </div>
+        </div>
+        <p class="location"><i class="fas fa-map-pin"></i> New Delhi</p>
+        <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis iste possimus minima eligendi animi non, commodi, incidunt eum expedita provident rerum. 
+    </div>
+
+    <div class="follow-bar">
+        <div class="followers">
+            <p class="follower-count counts">
+                26
+            </p>
+            <label class="follower-label labels" for="">Follower</label>
+        </div>
+        <div class="following">
+            <p class="follower-count counts">
+                30
+            </p>
+            <label class="follower-label labels" for="">Following</label>
+        </div>
+        <div class="monitored">
+            <p class="follower-count counts">
+                15
+            </p>
+            <label class="follower-label labels" for="">Monitored</label>
+        </div>
+        <div class="monitoring">
+            <p class="follower-count counts">
+                20
+            </p>
+            <label class="follower-label labels" for="">Monitoring</label>
+        </div>    
+    </div>
+
+    <ul class="nav nav-tabs tablist" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button
+            class="nav-link active"
+            id="about-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#about-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="about-tab-pane"
+            aria-selected="true"
+            >
+            About
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+            class="nav-link"
+            id="posts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#posts-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="posts-tab-pane"
+            aria-selected="false"
+            >
+            Posts
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+            class="nav-link"
+            id="website-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#website-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="website-tab-pane"
+            aria-selected="false"
+            >
+            Website
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+            class="nav-link"
+            id="finances-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#finances-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="finances-tab-pane"
+            aria-selected="false"
+            >
+            Finances
+            </button>
+        </li>
+    </ul>
+
+<div class="tab-content" id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="about-tab-pane"
+    role="tabpanel"
+    aria-labelledby="about-tab"
+    tabindex="0"
+  >
+    <h5>About</h5>
+    <p>This tab contains details about the user or entity.</p>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="posts-tab-pane"
+    role="tabpanel"
+    aria-labelledby="posts-tab"
+    tabindex="0"
+  >
+    <h5>Posts</h5>
+    <p>This tab displays posts or articles related to the user or entity.</p>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="website-tab-pane"
+    role="tabpanel"
+    aria-labelledby="website-tab"
+    tabindex="0"
+  >
+    <h5>Website</h5>
+    <p>This tab contains website details or links.</p>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="finances-tab-pane"
+    role="tabpanel"
+    aria-labelledby="finances-tab"
+    tabindex="0"
+  >
+    <h5>Finances</h5>
+    <p>This tab provides financial details or statistics.</p>
+  </div>
+</div>
+
+</section>

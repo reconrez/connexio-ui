@@ -1,1 +1,24 @@
-<p>messages works!</p>
+<div class=" message-module">
+      <!-- Sidebar: Search and User List -->
+        <div class="search-box p-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search users..."
+          />
+        </div>
+        <ul class="list-group user-list">
+          <li class="list-group-item conversations d-flex align-items-center">
+            <a class="conversation-link" [routerLink]="['/chat']">
+              <div class="user-image">
+                <img alt="Profile Photo" class="rounded-circle me-2" src="img/anime3.png" width="40" height="40" />
+              </div>
+              <div class="message-content">
+                <p class="card-title username mb-0">UserName</p>
+                <p class="card-title content mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea tenetur in eligendi fugit officiis obcaecati reprehenderit pariatur</p>
+              </div>
+
+            </a>          
+          </li>
+        </ul>
+  </div>

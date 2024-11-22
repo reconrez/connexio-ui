@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   checkAuthentication() {
     if (localStorage.getItem('access_token')) {
       console.log("Navigate to home page")
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/home']);
     }else{
       console.log("token not found")
     }
