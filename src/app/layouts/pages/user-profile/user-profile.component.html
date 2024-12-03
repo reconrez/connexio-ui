@@ -1,11 +1,16 @@
 <section class="user-profile">
     <div class="bio-container">
         <div class="identity">
+          <div class="d-flex justify-content-start">
             <img alt="Profile Photo" class="rounded-circle me-2" src="img/anime3.png" width="40" height="40" />
             <div class="username-container">
                 <p class="card-title mb-0">UserName</p>
                 <p class="name">Name</p>
             </div>
+          </div>
+            <a class="edit-profile" [routerLink]="['/edit-profile']">
+              <i class="fa-solid fa-gear"></i>
+            </a>
         </div>
         <p class="location"><i class="fas fa-map-pin"></i> New Delhi</p>
         <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis iste possimus minima eligendi animi non, commodi, incidunt eum expedita provident rerum. 

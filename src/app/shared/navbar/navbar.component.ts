@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { HomeComponent } from "../../layouts/pages/home/home.component";
+import { ForumComponent } from "../../layouts/pages/forum/forum.component";
+import { UserProfileComponent } from "../../layouts/pages/user-profile/user-profile.component";
+import { MessagesComponent } from "../../layouts/pages/messages/messages.component";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [HomeComponent, ForumComponent, UserProfileComponent, MessagesComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

@@ -11,6 +11,8 @@ import { HomeComponent } from './layouts/pages/home/home.component';
 import { UserProfileComponent } from './layouts/pages/user-profile/user-profile.component';
 import { DiscussionPageComponent } from './layouts/pages/discussion-page/discussion-page.component';
 import { ChatComponent } from './layouts/pages/messages/chat/chat.component';
+import { EditProfileComponent } from './layouts/pages/user-profile/edit-profile/edit-profile.component';
+import { ForumComponent } from './layouts/pages/forum/forum.component';
 
 export const routes: Routes = [
       {
@@ -34,8 +36,9 @@ export const routes: Routes = [
           { path: "messages", component: MessagesComponent },
           { path: "chat", component: ChatComponent },
           // { path: "explore", component: ExploreComponent },
-          { path: "forum", component: DiscussionPageComponent },
+          { path: "forum", component: ForumComponent },
           { path: "profile", component: UserProfileComponent },
+          { path: "edit-profile", component: EditProfileComponent },
           { path: "", redirectTo: "home", pathMatch: "full" }, // Default route for Dashboard
         ],
       },

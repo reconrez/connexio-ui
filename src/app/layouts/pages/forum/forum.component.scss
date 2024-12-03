@@ -1,0 +1,27 @@
+.thread {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .thread-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .thread-link:hover {
+    text-decoration: underline;
+  }
+
+  .create-thread-form {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .create-thread-form .btn-primary {
+    display: block;
+    width: 100%;
+  }
+  
