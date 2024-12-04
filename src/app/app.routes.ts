@@ -13,6 +13,8 @@ import { DiscussionPageComponent } from './layouts/pages/discussion-page/discuss
 import { ChatComponent } from './layouts/pages/messages/chat/chat.component';
 import { EditProfileComponent } from './layouts/pages/user-profile/edit-profile/edit-profile.component';
 import { ForumComponent } from './layouts/pages/forum/forum.component';
+import { ExploreComponent } from './layouts/pages/explore/explore.component';
+import { BiddingComponent } from './layouts/pages/bidding/bidding.component';
 
 export const routes: Routes = [
       {
@@ -35,7 +37,8 @@ export const routes: Routes = [
           { path: "home", component: HomeComponent },
           { path: "messages", component: MessagesComponent },
           { path: "chat", component: ChatComponent },
-          // { path: "explore", component: ExploreComponent },
+          { path: "explore", component: ExploreComponent },
+          { path: "bidding", component: BiddingComponent },
           { path: "forum", component: ForumComponent },
           { path: "profile", component: UserProfileComponent },
           { path: "edit-profile", component: EditProfileComponent },

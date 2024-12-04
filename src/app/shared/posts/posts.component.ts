@@ -37,6 +37,12 @@ export class PostsComponent implements OnInit {
     this.postData.comments = [];
   }
 
+  moveSeeMoreButtonToBottom() {
+    const commentsContainer = document.getElementById('commentsContainer');
+    const button = commentsContainer.nextElementSibling;
+    commentsContainer.appendChild(button);
+  }
+  
   commentsVisibility(){
     this.commentsHide = !this.commentsHide;
     

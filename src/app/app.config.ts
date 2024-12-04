@@ -7,12 +7,13 @@ import { HTTP_INTERCEPTORS, provideHttpClient,  
  withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';   
-import { authTokenInterceptor } from './interceptors/auth-token.interceptor';
+// import { authTokenInterceptor } from './interceptors/auth-token.interceptor';
 
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(withInterceptors([authTokenInterceptor]), withFetch()),
+    provideHttpClient(),
+    // provideHttpClient(withInterceptors([authTokenInterceptor]), withFetch()),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),

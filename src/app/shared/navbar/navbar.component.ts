@@ -19,6 +19,7 @@ export class NavbarComponent {
 
   constructor(private router: Router, private location : Location) {}
 
+  
   navigateTo(route: string): void {
     this.router.navigate([route]); // Navigate to the specified route
   }
@@ -45,5 +46,7 @@ export class NavbarComponent {
       }
 
   }
+
+
 
 }

@@ -5,12 +5,12 @@
     <i id="darkModeButton" class="fa-solid fa-mountain-sun"></i>     
   </div>  
 </div>
-<nav class="navbar navbar-expand-lg navbar-absolute">
+<!-- <nav class="navbar navbar-expand-lg navbar-absolute">
   <div class="container-fluid justify-content-between">
     <a id="home" class="home-icon" (click)="navigateTo('home')">
       <i class="fa-solid fa-house"></i>
     </a>
-    <a id="search" class="search-icon" (click)="navigateTo('search')">
+    <a id="search" class="search-icon" (click)="navigateTo('explore')">
       <i class="fa-solid fa-magnifying-glass"></i>
     </a>
     <a id="forum" class="forum-icon" (click)="navigateTo('forum')">
@@ -26,7 +26,50 @@
       <i class="fa-solid fa-user"></i>
     </a>
   </div>
+</nav> -->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-absolute">
+  <div class="container-fluid justify-content-between position-relative">
+    <!-- Home -->
+    <a id="home" class="home-icon d-flex flex-column align-items-center" (click)="navigateTo('home')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">
+      <i class="fa-solid fa-house"></i>
+      <span class="nav-text d-none">Home</span>
+    </a>
+
+    <!-- Search -->
+    <a id="search" class="search-icon d-flex flex-column align-items-center" (click)="navigateTo('explore')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span class="nav-text d-none">Search</span>
+    </a>
+
+    <!-- Forum -->
+    <a id="forum" class="forum-icon d-flex flex-column align-items-center" (click)="navigateTo('forum')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forum">
+      <i class="fa-brands fa-forumbee"></i>
+      <span class="nav-text d-none">Forum</span>
+    </a>
+
+    <!-- Explore -->
+    <a id="explore" class="explore-icon d-flex flex-column align-items-center" (click)="navigateTo('bidding')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Explore">
+      <i class="fa-solid fa-gavel"></i>
+      <span class="nav-text d-none">Explore</span>
+    </a>
+
+    <!-- Messages -->
+    <a id="messages" class="messages-icon d-flex flex-column align-items-center" (click)="navigateTo('messages')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages">
+      <i class="fa-solid fa-envelope"></i>
+      <span class="nav-text d-none">Messages</span>
+    </a>
+
+    <!-- Profile -->
+    <a id="profile" class="profile-icon d-flex flex-column align-items-center" (click)="navigateTo('profile')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+      <i class="fa-solid fa-user"></i>
+      <span class="nav-text d-none">Profile</span>
+    </a>
+  </div>
 </nav>
+
 
 
 

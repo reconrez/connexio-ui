@@ -1,0 +1,121 @@
+<div class="container">
+    <!-- Create Requirement Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold">Bid</h2>
+    </div>
+    <div class="card mb-4">
+      <div class="card-header">
+        <p class="fw-bold">Create a Requirement</p>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="requirement-title" class="form-label">Title</label>
+            <input type="text" id="requirement-title" class="form-control" placeholder="Enter title" required>
+          </div>
+          <div class="mb-3">
+            <label for="requirement-summary" class="form-label">Brief Summary</label>
+            <textarea id="requirement-summary" class="form-control" rows="3" placeholder="Enter brief summary" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="requirement-document" class="form-label">Detailed Document (Optional)</label>
+            <input type="file" id="requirement-document" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Requirement</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Recommended Bids Section -->
+    <div class="card mb-4">
+      <div class="card-header d-flex justify-content-between">
+        <p class="fw-bold">Recommended Bids</p>
+        <button class="btn btn-link text-decoration-none" data-bs-toggle="collapse" data-bs-target="#filters-section">
+          Filters
+        </button>
+      </div>
+      <div class="card-body">
+        <div id="filters-section" class="collapse">
+          <!-- Filters -->
+          <form class="mb-3">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="filter-keywords" class="form-label">Keywords</label>
+                <input type="text" id="filter-keywords" class="form-control" placeholder="Search by keywords">
+              </div>
+              <div class="col-md-4">
+                <label for="filter-user-type" class="form-label">User Type</label>
+                <select id="filter-user-type" class="form-select">
+                  <option selected>All</option>
+                  <option>Buyer</option>
+                  <option>Seller</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="filter-location" class="form-label">Location</label>
+                <input type="text" id="filter-location" class="form-control" placeholder="City, Country">
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary mt-3">Apply Filters</button>
+          </form>
+        </div>
+        <!-- Bids List -->
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <p class="fw-bold">Bid Title 1</p>
+              <p>Short summary of the bid...</p>
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#view-bid-modal">View</button>
+          </li>
+          <!-- Repeat similar items for other bids -->
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Create Quotation Modal -->
+    <div class="modal fade" id="create-quotation-modal" tabindex="-1" aria-labelledby="createQuotationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title fw-bold" id="createQuotationModalLabel">Create Quotation</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="quotation-amount" class="form-label">Amount</label>
+                <input type="number" id="quotation-amount" class="form-control" placeholder="Enter amount" required>
+              </div>
+              <div class="mb-3">
+                <label for="quotation-summary" class="form-label">Summary</label>
+                <textarea id="quotation-summary" class="form-control" rows="3" placeholder="Enter summary" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="quotation-document" class="form-label">Detailed Bid (Optional)</label>
+                <input type="file" id="quotation-document" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Quotation</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- View Bid Modal -->
+    <div class="modal fade" id="view-bid-modal" tabindex="-1" aria-labelledby="viewBidModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title fw-bold" id="viewBidModalLabel">Bid Details</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Title:</strong> Bid Title 1</p>
+            <p><strong>Summary:</strong> Detailed summary of the bid...</p>
+            <button class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#create-quotation-modal">Create Quotation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

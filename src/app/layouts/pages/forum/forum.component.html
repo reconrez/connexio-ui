@@ -1,113 +1,118 @@
-<nav>
-    <div class="nav nav-tabs" id="forum-tab" role="tablist">
-      <button 
-        class="nav-link active" 
-        id="thread-feed-tab" 
-        data-bs-toggle="tab" 
-        data-bs-target="#thread-feed" 
-        type="button" 
-        role="tab" 
-        aria-controls="thread-feed" 
-        aria-selected="true">
-        Thread Feed
-      </button>
-      <button 
-        class="nav-link" 
-        id="my-threads-tab" 
-        data-bs-toggle="tab" 
-        data-bs-target="#my-threads" 
-        type="button" 
-        role="tab" 
-        aria-controls="my-threads" 
-        aria-selected="false">
-        My Threads
-      </button>
-      <button 
-        class="nav-link" 
-        id="create-thread-tab" 
-        data-bs-toggle="tab" 
-        data-bs-target="#create-thread" 
-        type="button" 
-        role="tab" 
-        aria-controls="create-thread" 
-        aria-selected="false">
-        Create Thread
-      </button>
-    </div>
-  </nav>
-  <div class="tab-content" id="forum-tabContent">
-    <!-- Thread Feed Tab -->
-    <div 
-      class="tab-pane fade show active" 
-      id="thread-feed" 
-      role="tabpanel" 
-      aria-labelledby="thread-feed-tab" 
-      tabindex="0">
-      <ul class="threads-list">
-        <!-- Example threads from other users -->
-        <li class="thread">
-          <a href="#" class="thread-link">
-            <h3>How to learn Angular?</h3>
-            <p>Posted by JohnDoe | Last activity: 2 hours ago</p>
-          </a>
-        </li>
-        <li class="thread">
-          <a href="#" class="thread-link">
-            <h3>Best UI libraries for Angular?</h3>
-            <p>Posted by JaneSmith | Last activity: 3 hours ago</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- My Threads Tab -->
-    <div 
-      class="tab-pane fade" 
-      id="my-threads" 
-      role="tabpanel" 
-      aria-labelledby="my-threads-tab" 
-      tabindex="0">
-      <ul class="threads-list">
-        <!-- Example threads created by the current user -->
-        <li class="thread">
-          <a href="#" class="thread-link">
-            <h3>Routing animations in Angular</h3>
-            <p>Posted by You | Last activity: 4 days ago</p>
-          </a>
-        </li>
-        <li class="thread">
-          <a href="#" class="thread-link">
-            <h3>State management tips?</h3>
-            <p>Posted by You | Last activity: 1 day ago</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- Create Thread Tab -->
-    <div 
-      class="tab-pane fade" 
-      id="create-thread" 
-      role="tabpanel" 
-      aria-labelledby="create-thread-tab" 
-      tabindex="0">
-      <form class="create-thread-form">
-        <div class="mb-3">
-          <label for="thread-title" class="form-label">Thread Title</label>
-          <input type="text" class="form-control" id="thread-title" placeholder="Enter a title for your thread" required />
-        </div>
-        <div class="mb-3">
-          <label for="thread-description" class="form-label">Thread Description</label>
-          <textarea 
-            class="form-control" 
-            id="thread-description" 
-            rows="4" 
-            placeholder="Enter a description for your thread" 
-            required>
-          </textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Create Thread</button>
-      </form>
-    </div>
+<section class="d-flex flex-column">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">Forum</h2>
   </div>
+  <nav>
+      <div class="nav nav-tabs d-flex justify-content-between" id="forum-tab" role="tablist">
+        <button 
+          class="nav-link active" 
+          id="thread-feed-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#thread-feed" 
+          type="button" 
+          role="tab" 
+          aria-controls="thread-feed" 
+          aria-selected="true">
+          Thread Feed
+        </button>
+        <button 
+          class="nav-link" 
+          id="my-threads-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#my-threads" 
+          type="button" 
+          role="tab" 
+          aria-controls="my-threads" 
+          aria-selected="false">
+          My Threads
+        </button>
+        <button 
+          class="nav-link" 
+          id="create-thread-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#create-thread" 
+          type="button" 
+          role="tab" 
+          aria-controls="create-thread" 
+          aria-selected="false">
+          Create Thread
+        </button>
+      </div>
+  </nav>
+    <div class="tab-content pt-4" id="forum-tabContent">
+      <!-- Thread Feed Tab -->
+      <div 
+        class="tab-pane fade show active" 
+        id="thread-feed" 
+        role="tabpanel" 
+        aria-labelledby="thread-feed-tab" 
+        tabindex="0">
+        <ul class="threads-list ml-0 p-0">
+          <!-- Example threads from other users -->
+          <li class="thread card">
+            <a href="#" class="thread-link">
+              <p class="fw-bold">How to learn Angular?</p>
+              <p>Posted by JohnDoe | Last activity: 2 hours ago</p>
+            </a>
+          </li>
+          <li class="thread card">
+            <a href="#" class="thread-link">
+              <p class="fw-bold">Best UI libraries for Angular?</p>
+              <p>Posted by JaneSmith | Last activity: 3 hours ago</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- My Threads Tab -->
+      <div 
+        class="tab-pane fade" 
+        id="my-threads" 
+        role="tabpanel" 
+        aria-labelledby="my-threads-tab" 
+        tabindex="0">
+        <ul class="threads-list p-0">
+          <!-- Example threads created by the current user -->
+          <li class="thread card">
+            <a href="#" class="thread-link">
+              <p class="fw-bold">Routing animations in Angular</p>
+              <p>Posted by You | Last activity: 4 days ago</p>
+            </a>
+          </li>
+          <li class="thread card">
+            <a href="#" class="thread-link">
+              <p class="fw-bold">State management tips?</p>
+              <p>Posted by You | Last activity: 1 day ago</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Create Thread Tab -->
+      <div 
+        class="tab-pane fade" 
+        id="create-thread" 
+        role="tabpanel" 
+        aria-labelledby="create-thread-tab" 
+        tabindex="0">
+        <form class="create-thread-form">
+          <div class="mb-3">
+            <label for="thread-title" class="form-label">Thread Title</label>
+            <input type="text" class="form-control" id="thread-title" placeholder="Enter a title for your thread" required />
+          </div>
+          <div class="mb-3">
+            <label for="thread-description" class="form-label">Thread Description</label>
+            <textarea 
+              class="form-control" 
+              id="thread-description" 
+              rows="4" 
+              placeholder="Enter a description for your thread" 
+              required>
+            </textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Thread</button>
+        </form>
+      </div>
+    </div>
+</section>
   

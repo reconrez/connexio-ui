@@ -8,9 +8,15 @@
                 <p class="name">Name</p>
             </div>
           </div>
-            <a class="edit-profile" [routerLink]="['/edit-profile']">
-              <i class="fa-solid fa-gear"></i>
-            </a>
+            <div class="d-flex">
+              <a class="edit-profile" [routerLink]="['/edit-profile']">
+                <i class="fa-solid fa-gear"></i>
+              </a>
+              <button class="btn btn-link text-danger" (click)="logout()">
+                <i class="fa-solid fa-sign-out-alt"></i>
+              </button>
+              
+            </div>
         </div>
         <p class="location"><i class="fas fa-map-pin"></i> New Delhi</p>
         <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis iste possimus minima eligendi animi non, commodi, incidunt eum expedita provident rerum. 

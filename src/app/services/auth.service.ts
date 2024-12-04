@@ -51,29 +51,53 @@ export class AuthService {
 
   logout() {
     var access_token = localStorage.getItem('access_token')
-    return this.http.post<any>(`${this.baseUrl}/auth/logout`,{ access_token })
-      .subscribe((res: any) => {
-        // Clear local authentication state
-        localStorage.removeItem('access_token');
-        localStorage.removeItem('current_user');
+    // Clear local authentication state
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('current_user');
 
-        // Update authentication state observable
-        this.isAuthenticatedSubject.next(false);
+    // Update authentication state observable
+    this.isAuthenticatedSubject.next(false);
 
-        // Handle client-side cookie clearing (if necessary)
-        if (document.cookie) {
-          const cookies = document.cookie.split(';');
-          cookies.forEach(cookie => {
-            const eqPos = cookie.indexOf('=');
-            let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-          });
-        }
-
-        // Redirect to login page
-        this.router.navigate(['/login']);
+    // Handle client-side cookie clearing (if necessary)
+    if (document.cookie) {
+      const cookies = document.cookie.split(';');
+      cookies.forEach(cookie => {
+        const eqPos = cookie.indexOf('=');
+        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
       });
-  }
+    }
+
+    // Redirect to login page
+    this.router.navigate(['/login']);
+  }  
+  
+  
+  // logout() {
+  //   var access_token = localStorage.getItem('access_token')
+  //   return this.http.post<any>(`${this.baseUrl}/auth/logout`,{ access_token })
+  //     .subscribe((res: any) => {
+  //       // Clear local authentication state
+  //       localStorage.removeItem('access_token');
+  //       localStorage.removeItem('current_user');
+
+  //       // Update authentication state observable
+  //       this.isAuthenticatedSubject.next(false);
+
+  //       // Handle client-side cookie clearing (if necessary)
+  //       if (document.cookie) {
+  //         const cookies = document.cookie.split(';');
+  //         cookies.forEach(cookie => {
+  //           const eqPos = cookie.indexOf('=');
+  //           let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+  //           document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  //         });
+  //       }
+
+  //       // Redirect to login page
+  //       this.router.navigate(['/login']);
+  //     });
+  // }
 
   handleMissingToken() {
     // Clear any potential tokens or user data

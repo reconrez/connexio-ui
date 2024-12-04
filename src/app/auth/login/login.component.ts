@@ -23,24 +23,30 @@ export class LoginComponent implements OnInit {
   })
 
   userLogin = ()=>{
-    console.log(`Login Values ${JSON.stringify(this.loginForm.value)}`);
-    this.authService.login(this.loginForm.value.username, this.loginForm.value.password)
-    if(this.loginForm.value.username){
-      console.log("redirecting to dashboard")
-    }
+    // console.log(`Login Values ${JSON.stringify(this.loginForm.value)}`);
+    // this.authService.login(this.loginForm.value.username, this.loginForm.value.password)
+    // if(this.loginForm.value.username){
+    //   console.log("redirecting to dashboard")
+    // }
+    this.router.navigate(['/home']);
   }
 
   checkAuthentication() {
-    if (localStorage.getItem('access_token')) {
       console.log("Navigate to home page")
       this.router.navigate(['/home']);
-    }else{
-      console.log("token not found")
-    }
+    
   }
+  // checkAuthentication() {
+  //   if (localStorage.getItem('access_token')) {
+  //     console.log("Navigate to home page")
+  //     this.router.navigate(['/home']);
+  //   }else{
+  //     console.log("token not found")
+  //   }
+  // }
 
   ngOnInit(): void {
-    this.checkAuthentication()
+    // this.checkAuthentication()
   }
 
 }
