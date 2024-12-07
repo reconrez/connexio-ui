@@ -7,11 +7,10 @@ import { UserProfileComponent } from "../../layouts/pages/user-profile/user-prof
 import { MessagesComponent } from "../../layouts/pages/messages/messages.component";
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [HomeComponent, ForumComponent, UserProfileComponent, MessagesComponent],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'app-navbar',
+    imports: [HomeComponent, ForumComponent, UserProfileComponent, MessagesComponent],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 

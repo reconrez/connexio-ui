@@ -5,11 +5,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 
 
 @Component({
-  selector: 'app-create-posts',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './create-posts.component.html',
-  styleUrl: './create-posts.component.scss'
+    selector: 'app-create-posts',
+    imports: [ReactiveFormsModule],
+    templateUrl: './create-posts.component.html',
+    styleUrl: './create-posts.component.scss'
 })
 export class CreatePostsComponent implements OnInit {
 

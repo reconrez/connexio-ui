@@ -9,7 +9,6 @@ import { FeedComponent } from "../feed/feed.component";
 import { Router, RouterModule } from '@angular/router';
 @Component({
     selector: 'app-dashboard',
-    standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss',
     imports: [NavbarComponent, RouterModule]

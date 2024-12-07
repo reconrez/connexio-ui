@@ -7,11 +7,10 @@ import { catchError } from 'rxjs';
 import { DecendingPipe } from "../../../pipes/decending.pipe";
 
 @Component({
-  selector: 'app-feed',
-  standalone: true,
-  imports: [PostsComponent, DecendingPipe],
-  templateUrl: './feed.component.html',
-  styleUrl: './feed.component.scss'
+    selector: 'app-feed',
+    imports: [PostsComponent, DecendingPipe],
+    templateUrl: './feed.component.html',
+    styleUrl: './feed.component.scss'
 })
 export class FeedComponent implements OnInit {
 

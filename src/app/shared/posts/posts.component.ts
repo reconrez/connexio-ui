@@ -4,11 +4,10 @@ import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angu
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-posts',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './posts.component.html',
-  styleUrl: './posts.component.scss'
+    selector: 'app-posts',
+    imports: [ReactiveFormsModule],
+    templateUrl: './posts.component.html',
+    styleUrl: './posts.component.scss'
 })
 export class PostsComponent implements OnInit {
 

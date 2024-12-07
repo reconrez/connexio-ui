@@ -49,14 +49,13 @@ const adminDashboardRoutes : Routes = [
 ]
 
 @Component({
-  selector: 'app-admin-layout',
-  standalone: true,
-  imports: [
-    RouterModule
-    // RouterModule.forChild(adminDashboardRoutes)
-  ],
-  templateUrl: './admin-layout.component.html',
-  styleUrl: './admin-layout.component.scss'
+    selector: 'app-admin-layout',
+    imports: [
+        RouterModule
+        // RouterModule.forChild(adminDashboardRoutes)
+    ],
+    templateUrl: './admin-layout.component.html',
+    styleUrl: './admin-layout.component.scss'
 })
 
 
