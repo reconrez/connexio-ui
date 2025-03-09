@@ -14,22 +14,22 @@ import { catchError, Observable,  
  throwError} from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
-// export class LoggingInterceptor implements HttpInterceptor   
-//  {
-//   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-//     console.log("============================");   
+export class LoggingInterceptor implements HttpInterceptor   
+ {
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    console.log("============================");   
 
-//     const clonedReq = req.clone(); // Create a clone of the request
+    const clonedReq = req.clone(); // Create a clone of the request
 
-//     return next.handle(clonedReq).pipe(
-//       tap(event => {
-//         if (event instanceof HttpResponse) {
-//           console.log(req.url, 'returned a response with status', event.status);
-//         }
-//       })
-//     );
-//   }
-// }
+    return next.handle(clonedReq).pipe(
+      tap(event => {
+        if (event instanceof HttpResponse) {
+          console.log(req.url, 'returned a response with status', event.status);
+        }
+      })
+    );
+  }
+}
 
 export const authTokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> => {
   console.log('Auth Token Interceptor: Processing request', req.url)
